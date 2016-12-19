@@ -1,0 +1,1381 @@
+@charset "UTF-8";
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0; }
+
+body,
+button,
+input,
+select,
+textarea {
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: arial; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%; }
+
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: couriernew, courier, monospace; }
+
+small {
+  font-size: 12px; }
+
+ul,
+ol {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+sup {
+  vertical-align: text-top; }
+
+sub {
+  vertical-align: text-bottom; }
+
+legend {
+  color: #000; }
+
+fieldset,
+img {
+  border: 0;
+  width: 100%;
+  display: block; }
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale; }
+
+@font-face {
+  font-family: 'iconfont';
+  /* project id 200036 */
+  src: url("//at.alicdn.com/t/font_o7t4dov6c3r0y66r.eot");
+  src: url("//at.alicdn.com/t/font_o7t4dov6c3r0y66r.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_o7t4dov6c3r0y66r.woff") format("woff"), url("//at.alicdn.com/t/font_o7t4dov6c3r0y66r.ttf") format("truetype"), url("//at.alicdn.com/t/font_o7t4dov6c3r0y66r.svg#iconfont") format("svg"); }
+html {
+  font-size: 100px;
+  width: 100%;
+  height: 100%; }
+
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column; }
+
+html, body {
+  overflow: hidden; }
+
+#toast {
+  position: fixed;
+  z-index: 9999 !important;
+  font-size: 0.32rem;
+  bottom: 2rem;
+  left: 1.8rem;
+  padding: 0.3rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.95);
+  border-radius: 0.1rem;
+  display: none; }
+
+#mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999 !important;
+  display: none; }
+  #mask img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+header {
+  width: 100%;
+  height: 0.8rem;
+  background: #fff;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+  /**************************************themeHeader_top**********************************************/
+  /*****************************************themeHeader_bottom*******************************************/ }
+  header #homeHeader {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: 0.4rem;
+    color: #fff;
+    padding: 0 4%; }
+    header #homeHeader li {
+      height: 100%; }
+      header #homeHeader li:nth-child(1) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%; }
+        header #homeHeader li:nth-child(1) .searchBox {
+          width: 100%;
+          height: 60%;
+          background: #f5f5f5;
+          color: #999;
+          border-radius: 0.3rem;
+          display: flex;
+          align-items: center; }
+          header #homeHeader li:nth-child(1) .searchBox i {
+            width: 0.5rem; }
+            header #homeHeader li:nth-child(1) .searchBox i.iconfont {
+              margin-left: 0.2rem; }
+          header #homeHeader li:nth-child(1) .searchBox span {
+            margin-top: 0.03rem;
+            font-size: 0.12rem; }
+      header #homeHeader li:nth-child(2) {
+        width: 12%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; }
+        header #homeHeader li:nth-child(2) i.iconfont {
+          font-size: 0.42rem;
+          color: #ccc; }
+  header #kindHeader {
+    width: 100%;
+    height: 100%;
+    display: flex; }
+    header #kindHeader li {
+      height: 0.6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      header #kindHeader li:nth-of-type(1) i {
+        font-size: 0.48rem;
+        margin-top: 0.1rem;
+        margin-left: 0.3rem; }
+      header #kindHeader li:nth-of-type(2) {
+        flex: 1;
+        font-size: 0.32rem;
+        height: 100%;
+        color: #999; }
+  header #searchHeader {
+    width: 100%;
+    height: 100%; }
+    header #searchHeader .searchBox {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 0.8rem;
+      background: #eeeeee; }
+      header #searchHeader .searchBox .search {
+        margin-left: 5%;
+        width: 80%;
+        height: 70%;
+        border-radius: 0.2rem;
+        display: flex;
+        align-items: center;
+        background: #fff; }
+        header #searchHeader .searchBox .search i {
+          width: 0.4rem;
+          height: 0.4rem;
+          margin: 0 0.2rem; }
+        header #searchHeader .searchBox .search input {
+          flex: 1;
+          height: 100%;
+          border: 0;
+          border-radius: 0.2rem; }
+      header #searchHeader .searchBox span {
+        margin-left: 10px;
+        color: red; }
+    header #searchHeader .searchResult li {
+      list-style: none;
+      width: 100%;
+      height: 1.6rem;
+      border-bottom: 1px solid darkgray; }
+      header #searchHeader .searchResult li .itemBox {
+        width: 100%;
+        height: 1.6rem;
+        display: flex; }
+        header #searchHeader .searchResult li .itemBox .itemImg {
+          height: 1.4rem;
+          width: 1.4rem; }
+          header #searchHeader .searchResult li .itemBox .itemImg img {
+            width: 100%;
+            height: 100%; }
+        header #searchHeader .searchResult li .itemBox .itemInfo {
+          flex: 1;
+          margin-top: 0.14rem;
+          margin-right: 0.2rem;
+          position: relative; }
+          header #searchHeader .searchResult li .itemBox .itemInfo p {
+            width: 100%;
+            font-size: 0.28rem; }
+            header #searchHeader .searchResult li .itemBox .itemInfo p:nth-child(1) {
+              font-weight: 900;
+              line-height: 0.4rem;
+              display: -webkit-box;
+              overflow: hidden;
+              white-space: normal !important;
+              text-overflow: ellipsis;
+              word-wrap: break-word;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical; }
+            header #searchHeader .searchResult li .itemBox .itemInfo p:nth-child(3) {
+              color: #ff5d74; }
+  header #loginHeader {
+    display: flex;
+    padding: 0.1rem 0.2rem; }
+    header #loginHeader li:nth-of-type(1) {
+      height: 0.6rem;
+      line-height: 0.6rem;
+      width: 0.8rem; }
+    header #loginHeader li:nth-child(3) {
+      width: 1.2rem;
+      height: 0.6rem;
+      line-height: 0.6rem;
+      text-align: center;
+      border-radius: 5px;
+      border: 1px solid #A9A9A9; }
+    header #loginHeader li:nth-of-type(2) {
+      flex: 1;
+      text-align: center;
+      line-height: 0.6rem; }
+  header #registerHeader {
+    display: flex;
+    padding: 0.1rem 0.2rem; }
+    header #registerHeader li:nth-of-type(1) {
+      height: 0.6rem;
+      line-height: 0.6rem;
+      width: 0.8rem; }
+    header #registerHeader li:nth-child(3) {
+      width: 1.2rem;
+      height: 0.6rem;
+      line-height: 0.6rem;
+      text-align: center;
+      border-radius: 5px;
+      border: 1px solid #A9A9A9; }
+    header #registerHeader li:nth-of-type(2) {
+      flex: 1;
+      text-align: center;
+      line-height: 0.6rem; }
+  header #cartHeader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: #ff5d74; }
+    header #cartHeader li {
+      height: 0.6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      header #cartHeader li:nth-of-type(1) {
+        width: 1.2rem;
+        font-size: 0.28rem;
+        margin-top: 0.1rem;
+        margin-left: 0.3rem;
+        border-radius: 0.1rem; }
+      header #cartHeader li:nth-of-type(2) {
+        flex: 1;
+        height: 100%;
+        font-size: 0.32rem;
+        color: #999; }
+      header #cartHeader li:nth-of-type(3) {
+        width: 1.2rem;
+        font-size: 0.28rem;
+        margin-top: 0.1rem;
+        margin-right: 0.3rem;
+        border-radius: 0.1rem; }
+  header #cartEditHeader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: #ff5d74; }
+    header #cartEditHeader li {
+      height: 0.6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      header #cartEditHeader li:nth-of-type(1) {
+        width: 1.2rem; }
+      header #cartEditHeader li:nth-of-type(2) {
+        flex: 1;
+        height: 100%;
+        font-size: 0.32rem;
+        color: #999; }
+      header #cartEditHeader li:nth-of-type(3) {
+        width: 1.2rem;
+        font-size: 0.28rem;
+        margin-top: 0.1rem;
+        margin-right: 0.3rem; }
+  header #userHeader {
+    height: 0.8rem;
+    background: #EEEEEE;
+    width: 100%; }
+    header #userHeader li {
+      height: 100%;
+      width: 100%;
+      line-height: 0.8rem;
+      height: 0.8rem;
+      text-align: center; }
+  header #detailHeader {
+    width: 100%;
+    height: 0.8rem;
+    display: flex; }
+    header #detailHeader li:nth-child(1) {
+      flex: 1;
+      font-size: 0.4rem;
+      line-height: 0.8rem;
+      margin-left: 0.1rem; }
+    header #detailHeader li:nth-child(2) {
+      flex: 2;
+      font-size: 0.4rem;
+      line-height: 0.8rem; }
+  header #orderHeader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: #ff5d74; }
+    header #orderHeader li {
+      height: 0.6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      header #orderHeader li:nth-of-type(1) {
+        width: 1.2rem;
+        font-size: 0.28rem;
+        margin-top: 0.1rem;
+        margin-left: 0.3rem;
+        border-radius: 0.1rem; }
+      header #orderHeader li:nth-of-type(2) {
+        flex: 1;
+        height: 100%;
+        font-size: 0.32rem;
+        color: #999; }
+      header #orderHeader li:nth-of-type(3) {
+        width: 1.2rem;
+        font-size: 0.28rem;
+        margin-top: 0.1rem;
+        margin-right: 0.3rem;
+        border-radius: 0.1rem; }
+  header #ThemeHeader {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: relative; }
+    header #ThemeHeader .logo {
+      width: 100%;
+      text-align: center;
+      margin: 0.1rem;
+      color: black;
+      font-size: 0.4rem; }
+    header #ThemeHeader > .ThemeNav {
+      display: block;
+      position: absolute;
+      width: 0.6rem;
+      height: 0.6rem;
+      right: 0.2rem;
+      top: 0.1rem;
+      font-size: 0.40rem;
+      line-height: 0.6rem;
+      text-align: center;
+      letter-spacing: 0.075rem;
+      weight: 600;
+      color: #ccc; }
+  header #ThemeListHeader {
+    display: flex;
+    height: 100%;
+    width: 100%; }
+    header #ThemeListHeader .logo {
+      width: 100%;
+      text-align: center;
+      margin: 0.1rem;
+      color: #black;
+      font-size: 0.4rem; }
+
+section {
+  flex: 1;
+  overflow-y: auto;
+  /**************************************themeContent_top**********************************************/
+  /**************************************themeContent_bottom**********************************************/
+  /**************************************themeListContent_top**********************************************/
+  /**************************************themeListContent_bottom**********************************************/ }
+  section #homeContent {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    section #homeContent .swiper-container {
+      width: 100%;
+      height: 3rem;
+      background: #ccc;
+      overflow: hidden; }
+      section #homeContent .swiper-container .loading {
+        width: 100%;
+        height: 100%; }
+        section #homeContent .swiper-container .loading img {
+          width: 100%;
+          height: 100%; }
+    section #homeContent .classify {
+      width: 100%;
+      height: 3rem;
+      display: flex;
+      flex-wrap: wrap; }
+      section #homeContent .classify li {
+        max-width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        section #homeContent .classify li .classItem {
+          width: 80%; }
+        section #homeContent .classify li p {
+          font-size: 0.28rem; }
+    section #homeContent #proList {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap; }
+      section #homeContent #proList li {
+        border-radius: 0.05rem;
+        margin-left: 1%;
+        margin-top: 0.1rem;
+        max-width: 46%;
+        height: 4rem;
+        border: 1px solid #eee;
+        padding: 1%; }
+        section #homeContent #proList li .proImg {
+          width: 100%;
+          height: 65%;
+          overflow: hidden; }
+          section #homeContent #proList li .proImg img {
+            width: 100%; }
+        section #homeContent #proList li .proInfo {
+          line-height: 0.4rem; }
+          section #homeContent #proList li .proInfo p:nth-child(1) {
+            display: flex; }
+            section #homeContent #proList li .proInfo p:nth-child(1) span:nth-child(1) {
+              flex: 1;
+              font-size: 0.32rem;
+              color: #ff5d74;
+              line-height: 0.6rem; }
+            section #homeContent #proList li .proInfo p:nth-child(1) span:nth-child(2) {
+              margin: 0.1rem;
+              width: 0.8rem;
+              height: 0.4rem;
+              background-color: #ff5d74;
+              color: #fff;
+              text-align: center;
+              line-height: 0.4rem;
+              font-size: 0.32rem;
+              border-radius: 0.05rem; }
+          section #homeContent #proList li .proInfo p:nth-child(2) {
+            text-decoration: line-through;
+            color: #999; }
+          section #homeContent #proList li .proInfo p:nth-child(3) {
+            font-size: 0.26rem;
+            color: #333;
+            display: -webkit-box;
+            overflow: hidden;
+            white-space: normal !important;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical; }
+  section #detailContent {
+    width: 100%;
+    height: 100%; }
+    section #detailContent .swiper-container {
+      width: 100%;
+      height: 6rem; }
+    section #detailContent #detailInfo {
+      width: 96%;
+      padding: 0 2%; }
+      section #detailContent #detailInfo p:nth-child(1) {
+        margin-top: 0.2rem;
+        color: #333;
+        font-size: 0.38rem;
+        line-height: 0.52rem;
+        display: -webkit-box;
+        overflow: hidden;
+        white-space: normal !important;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical; }
+      section #detailContent #detailInfo p:nth-child(2) {
+        color: #666;
+        font-size: 0.28rem;
+        line-height: 0.8rem;
+        height: 0.8rem; }
+      section #detailContent #detailInfo p:nth-child(3) {
+        width: 100%;
+        height: 0.8rem;
+        display: flex; }
+        section #detailContent #detailInfo p:nth-child(3) span {
+          flex: 1;
+          margin-right: 0.2rem;
+          width: 1rem;
+          height: 0.52rem;
+          display: block;
+          line-height: 0.52rem;
+          text-align: center;
+          font-size: 0.28rem;
+          border: 1px solid #999; }
+        section #detailContent #detailInfo p:nth-child(3) .s1 {
+          border-color: #ff5d74;
+          color: #ff5d74; }
+      section #detailContent #detailInfo p:nth-child(4) {
+        width: 100%;
+        margin-top: 0.2rem;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        display: flex; }
+        section #detailContent #detailInfo p:nth-child(4) span:nth-child(1) {
+          width: 26%;
+          font-size: 0.46rem;
+          color: #ff5d74; }
+        section #detailContent #detailInfo p:nth-child(4) span:nth-child(2) {
+          width: 40%;
+          text-decoration: line-through;
+          color: #666;
+          font-size: 0.3rem;
+          line-height: 0.52rem;
+          margin: 0.2rem 0.2rem 0; }
+        section #detailContent #detailInfo p:nth-child(4) span:nth-child(3) {
+          flex: 1;
+          margin-right: 0.1rem;
+          margin-top: 0.1rem;
+          display: block;
+          width: 1.2rem;
+          height: 0.6rem;
+          font-size: 0.38rem;
+          background-color: #ff5d74;
+          color: #fff;
+          text-align: center;
+          line-height: 0.6rem;
+          border-radius: 0.1rem; }
+  section #userContent {
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    overflow: hidden; }
+    section #userContent .userHeader {
+      width: 100%;
+      height: 3.2rem;
+      background: #f03c64;
+      position: relative; }
+      section #userContent .userHeader .userSet {
+        font-size: 0.37rem;
+        position: absolute;
+        left: 0.12rem;
+        top: 0.12rem; }
+      section #userContent .userHeader .userMore {
+        font-size: 0.37rem;
+        position: absolute;
+        right: 0.12rem;
+        top: 0.12rem; }
+      section #userContent .userHeader .userImg {
+        position: absolute;
+        left: 3.5rem;
+        bottom: 1.2rem; }
+      section #userContent .userHeader .userBtn {
+        display: flex; }
+        section #userContent .userHeader .userBtn .loginBtn {
+          font-family: arial;
+          display: block;
+          position: absolute;
+          left: 1.7rem;
+          bottom: 0.3rem;
+          background: lightpink;
+          text-align: center;
+          border-radius: 0.2rem;
+          width: 1.2rem;
+          height: 0.5rem;
+          line-height: 0.5rem; }
+        section #userContent .userHeader .userBtn .registerBtn {
+          font-family: arial;
+          display: block;
+          position: absolute;
+          right: 1.7rem;
+          bottom: 0.3rem;
+          background: lightpink;
+          text-align: center;
+          border-radius: 0.2rem;
+          width: 1.2rem;
+          height: 0.5rem;
+          line-height: 0.5rem; }
+    section #userContent .userContent {
+      width: 100%;
+      height: 6.6rem;
+      background: #fff; }
+      section #userContent .userContent .userPic {
+        width: 100%;
+        background: #fff;
+        height: 1.2rem; }
+        section #userContent .userContent .userPic li {
+          width: 33%;
+          float: left;
+          text-align: center; }
+          section #userContent .userContent .userPic li i {
+            width: 100%;
+            text-align: center;
+            font-size: 0.5rem; }
+          section #userContent .userContent .userPic li p {
+            font-family: arial; }
+      section #userContent .userContent .userLi {
+        width: 100%;
+        height: 5.4 rem;
+        background: #eee; }
+        section #userContent .userContent .userLi li {
+          background: #fff;
+          padding-left: 0.2rem;
+          width: 100%;
+          height: 0.8rem;
+          border-bottom: 1px solid #eee;
+          line-height: 0.8rem; }
+          section #userContent .userContent .userLi li i {
+            position: absolute;
+            right: 0.5rem; }
+        section #userContent .userContent .userLi li:nth-child(1) {
+          margin-top: 0.2rem;
+          margin-bottom: 0.2rem; }
+  section #loginContent {
+    display: flex;
+    flex-direction: column;
+    margin: 0.8rem 0.3rem; }
+    section #loginContent input {
+      height: 0.8rem;
+      margin-bottom: 0.5rem;
+      border-radius: 0.1rem;
+      text-indent: 0.24rem; }
+      section #loginContent input:nth-of-type(3) {
+        color: #fff;
+        text-align: center;
+        lin-height: 0.8rem;
+        font-size: 0.32rem;
+        border: 0;
+        background: -webkit-radial-gradient(top, #ffc3da, #ff5d74); }
+    section #loginContent .func {
+      display: flex;
+      height: 0.8rem;
+      line-height: 0.8rem; }
+      section #loginContent .func span {
+        margin-left: 0.1rem;
+        margin-right: 0.5rem; }
+      section #loginContent .func a {
+        text-decoration: underline; }
+  section #registerContent {
+    display: flex;
+    flex-direction: column;
+    margin: 0.8rem 0.3rem; }
+    section #registerContent p {
+      color: palevioletred; }
+    section #registerContent input {
+      height: 0.8rem;
+      margin-top: 0.5rem;
+      border-radius: 0.1rem;
+      text-indent: 0.24rem; }
+      section #registerContent input:nth-of-type(4) {
+        color: #fff;
+        text-align: center;
+        lin-height: 0.8rem;
+        font-size: 0.32rem;
+        border: 0;
+        background: -webkit-radial-gradient(top, #ffc3da, #ff5d74); }
+  section #searchContent {
+    width: 100%;
+    height: 100%; }
+    section #searchContent .searchBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 0.8rem;
+      background: #999; }
+      section #searchContent .searchBox .search {
+        width: 90%;
+        height: 70%;
+        border-radius: 0.2rem;
+        display: flex;
+        align-items: center;
+        background: #fff; }
+        section #searchContent .searchBox .search i {
+          width: 0.4rem;
+          height: 0.4rem;
+          margin: 0 0.2rem; }
+        section #searchContent .searchBox .search input {
+          flex: 1;
+          height: 100%;
+          border: 0;
+          border-radius: 0.2rem; }
+    section #searchContent .searchResult li {
+      list-style: none;
+      width: 100%;
+      height: 1.6rem;
+      border-bottom: 1px solid darkgray; }
+      section #searchContent .searchResult li .itemBox {
+        width: 100%;
+        height: 1.6rem;
+        display: flex; }
+        section #searchContent .searchResult li .itemBox .itemImg {
+          height: 1.4rem;
+          width: 1.4rem; }
+          section #searchContent .searchResult li .itemBox .itemImg img {
+            width: 100%;
+            height: 100%; }
+        section #searchContent .searchResult li .itemBox .itemInfo {
+          flex: 1;
+          margin-top: 0.14rem;
+          margin-right: 0.2rem;
+          position: relative; }
+          section #searchContent .searchResult li .itemBox .itemInfo p {
+            width: 100%;
+            font-size: 0.28rem; }
+            section #searchContent .searchResult li .itemBox .itemInfo p:nth-child(1) {
+              font-weight: 900;
+              line-height: 0.4rem;
+              display: -webkit-box;
+              overflow: hidden;
+              white-space: normal !important;
+              text-overflow: ellipsis;
+              word-wrap: break-word;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical; }
+            section #searchContent .searchResult li .itemBox .itemInfo p:nth-child(3) {
+              color: #ff5d74; }
+  section #cartContent {
+    width: 100%;
+    height: 100%; }
+    section #cartContent .emptyInfo {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      section #cartContent .emptyInfo p {
+        width: 2.2rem;
+        height: 1rem;
+        font-size: 0.32rem;
+        line-height: 1rem;
+        text-align: center;
+        border: 1px solid #ff5d74;
+        box-sizing: border-box;
+        color: #ff5d74; }
+    section #cartContent #cartList {
+      width: 100%; }
+      section #cartContent #cartList li {
+        width: 100%;
+        height: 1.8rem;
+        position: relative; }
+        section #cartContent #cartList li .delItem {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 1rem;
+          height: 100%;
+          background: #ff5d74;
+          color: #fff;
+          font-size: 0.36rem;
+          text-align: center;
+          line-height: 1.8rem; }
+        section #cartContent #cartList li .item {
+          width: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          overflow: hidden;
+          background: #fff;
+          display: flex; }
+          section #cartContent #cartList li .item .itemImg {
+            width: 1.6rem;
+            height: 1.6rem;
+            margin: 0.1rem 0.2rem 0.1rem 0.1rem; }
+            section #cartContent #cartList li .item .itemImg img {
+              height: 100%; }
+          section #cartContent #cartList li .item .itemInfo {
+            flex: 1;
+            margin-top: 0.2rem;
+            position: relative; }
+            section #cartContent #cartList li .item .itemInfo p {
+              line-height: 0.53rem;
+              width: 100%;
+              font-size: 0.28rem; }
+              section #cartContent #cartList li .item .itemInfo p:nth-child(1) {
+                line-height: 0.4rem;
+                display: -webkit-box;
+                overflow: hidden;
+                white-space: normal !important;
+                text-overflow: ellipsis;
+                word-wrap: break-word;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical; }
+              section #cartContent #cartList li .item .itemInfo p:nth-child(2) {
+                margin-top: 0.1rem; }
+                section #cartContent #cartList li .item .itemInfo p:nth-child(2) span {
+                  font-size: 0.12rem;
+                  color: #ff5d74; }
+                  section #cartContent #cartList li .item .itemInfo p:nth-child(2) span b {
+                    font-size: 0.28rem; }
+        section #cartContent #cartList li:after {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: #eee;
+          transform-origin: 0 0;
+          transform: scaleY(0.5); }
+    section #cartContent #cartCount {
+      position: fixed;
+      left: 0;
+      bottom: 0.8rem;
+      background: #fff;
+      border-top: 1px solid #eee;
+      box-sizing: border-box;
+      display: flex;
+      width: 100%;
+      height: 0.8rem;
+      line-height: 0.8rem; }
+      section #cartContent #cartCount p {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 0.2rem;
+        font-size: 0.32rem; }
+        section #cartContent #cartCount p span:nth-child(1) {
+          font-size: 0.12rem;
+          color: #ff5d74; }
+        section #cartContent #cartCount p span:nth-child(2) {
+          font-size: 0.32rem;
+          color: #ff5d74;
+          font-weight: bold; }
+      section #cartContent #cartCount .countBtn {
+        width: 1.2rem;
+        height: 0.6rem;
+        font-size: 0.28rem;
+        margin-top: 0.1rem;
+        margin-right: 0.3rem;
+        background: #ff5d74;
+        color: #fff;
+        text-align: center;
+        line-height: 0.6rem; }
+  section #cartEditContent #cartEditList {
+    width: 100%; }
+    section #cartEditContent #cartEditList li {
+      width: 100%;
+      height: 1.8rem;
+      position: relative; }
+      section #cartEditContent #cartEditList li .delItem {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1rem;
+        height: 100%;
+        background: #ff5d74;
+        color: #fff;
+        font-size: 0.36rem;
+        text-align: center;
+        line-height: 1.8rem; }
+      section #cartEditContent #cartEditList li .item {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        background: #fff;
+        display: flex; }
+        section #cartEditContent #cartEditList li .item .itemImg {
+          width: 1.6rem;
+          height: 1.6rem;
+          margin: 0.1rem 0.2rem 0.1rem 0.1rem; }
+          section #cartEditContent #cartEditList li .item .itemImg img {
+            height: 100%; }
+        section #cartEditContent #cartEditList li .item .itemInfo {
+          flex: 1;
+          margin-top: 0.2rem;
+          position: relative; }
+          section #cartEditContent #cartEditList li .item .itemInfo p {
+            line-height: 0.53rem;
+            width: 100%;
+            font-size: 0.28rem; }
+            section #cartEditContent #cartEditList li .item .itemInfo p:nth-child(1) {
+              line-height: 0.4rem;
+              display: -webkit-box;
+              overflow: hidden;
+              white-space: normal !important;
+              text-overflow: ellipsis;
+              word-wrap: break-word;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical; }
+            section #cartEditContent #cartEditList li .item .itemInfo p:nth-child(2) {
+              margin-top: 0.1rem; }
+              section #cartEditContent #cartEditList li .item .itemInfo p:nth-child(2) span {
+                font-size: 0.12rem;
+                color: #ff5d74; }
+                section #cartEditContent #cartEditList li .item .itemInfo p:nth-child(2) span b {
+                  font-size: 0.28rem; }
+            section #cartEditContent #cartEditList li .item .itemInfo p:nth-child(3) {
+              display: flex; }
+              section #cartEditContent #cartEditList li .item .itemInfo p:nth-child(3) strong {
+                flex: 1;
+                display: flex; }
+                section #cartEditContent #cartEditList li .item .itemInfo p:nth-child(3) strong span {
+                  border: 1px solid #eee;
+                  width: 0.6rem;
+                  height: 80%;
+                  text-align: center;
+                  line-height: 0.4rem; }
+      section #cartEditContent #cartEditList li:after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: #eee;
+        transform-origin: 0 0;
+        transform: scaleY(0.5); }
+  section #orderContent .orderList {
+    width: 100%; }
+    section #orderContent .orderList li {
+      width: 100%;
+      height: 1.8rem;
+      display: flex;
+      position: relative; }
+      section #orderContent .orderList li .itemImg {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin: 0.1rem; }
+      section #orderContent .orderList li .itemInfo {
+        flex: 1;
+        margin-top: 0.14rem;
+        margin-right: 0.2rem;
+        position: relative; }
+        section #orderContent .orderList li .itemInfo p {
+          width: 100%;
+          font-size: 0.28rem; }
+          section #orderContent .orderList li .itemInfo p:nth-child(1) {
+            line-height: 0.34rem;
+            display: -webkit-box;
+            overflow: hidden;
+            white-space: normal !important;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical; }
+          section #orderContent .orderList li .itemInfo p:nth-child(3) {
+            color: #333; }
+            section #orderContent .orderList li .itemInfo p:nth-child(3) span {
+              color: #ff5d74; }
+      section #orderContent .orderList li:after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: #999;
+        transform-origin: 0 0;
+        transform: scaleY(0.5); }
+  section #ThemeContent {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    section #ThemeContent #ThemeContent1 {
+      width: 100%;
+      height: 100%;
+      position: absolute; }
+      section #ThemeContent #ThemeContent1 > li {
+        width: 100%;
+        height: 3rem;
+        margin-bottom: 0.1rem; }
+        section #ThemeContent #ThemeContent1 > li .img {
+          width: 100%;
+          height: 2.5rem; }
+          section #ThemeContent #ThemeContent1 > li .img img {
+            width: 100%;
+            height: 100%; }
+        section #ThemeContent #ThemeContent1 > li p {
+          font-family: "微软雅黑";
+          height: 0.5rem;
+          font-weight: 600;
+          font-size: 0.30rem;
+          line-height: 0.5rem;
+          text-indent: 0.4rem;
+          background: #333333;
+          color: white; }
+    section #ThemeContent #ThemeKindNav {
+      position: fixed;
+      right: -1.5rem;
+      top: 0.8rem;
+      bottom: 0.8rem;
+      width: 1.5rem;
+      background: rgba(0, 0, 0, 0.3);
+      overflow: auto; }
+      section #ThemeContent #ThemeKindNav > li {
+        height: 1rem;
+        margin-left: 5%;
+        width: 90%;
+        border-bottom: 2px solid ghostwhite;
+        margin-bottom: 0.1rem;
+        font-family: "微软雅黑";
+        font-size: 0.34rem;
+        line-height: 1rem;
+        text-align: center;
+        color: whitesmoke; }
+      section #ThemeContent #ThemeKindNav li:hover {
+        color: black; }
+  section #ThemeListContent {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    section #ThemeListContent > #prolist {
+      height: 100%;
+      width: 100%; }
+      section #ThemeListContent > #prolist li {
+        width: 100%;
+        height: 2rem;
+        display: flex;
+        position: relative;
+        background: white; }
+        section #ThemeListContent > #prolist li:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          bottom: 0;
+          left: 0;
+          background-color: #ccc;
+          transform-origin: 0 0;
+          transform: scaleY(0.5); }
+        section #ThemeListContent > #prolist li .proimg {
+          width: 1.8rem;
+          height: 1.8rem;
+          margin: 0.1rem; }
+          section #ThemeListContent > #prolist li .proimg img {
+            width: 100%;
+            height: 100%; }
+        section #ThemeListContent > #prolist li .proinfo {
+          flex: 1;
+          margin-top: 0.14rem;
+          position: relative;
+          margin-right: 0.4rem;
+          padding-left: 0.2rem;
+          border-bottom: 1px solid #ccc; }
+          section #ThemeListContent > #prolist li .proinfo P {
+            font-family: "微软雅黑";
+            width: 100%; }
+            section #ThemeListContent > #prolist li .proinfo P:nth-child(1) {
+              font-size: 0.28rem;
+              line-height: 0.34rem;
+              display: -webkit-box;
+              overflow: hidden;
+              white-space: normal !important;
+              text-overflow: ellipsis;
+              word-wrap: break-word;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical; }
+            section #ThemeListContent > #prolist li .proinfo P:nth-child(2) {
+              position: absolute;
+              left: 0.1;
+              bottom: 0.42rem;
+              margin-bottom: 0.3rem;
+              height: 0.3rem;
+              line-height: 0.36rem; }
+              section #ThemeListContent > #prolist li .proinfo P:nth-child(2) span {
+                color: #ff5d74;
+                font-size: 0.28rem; }
+                section #ThemeListContent > #prolist li .proinfo P:nth-child(2) span b {
+                  color: #ff5d74;
+                  font-size: 0.36rem; }
+            section #ThemeListContent > #prolist li .proinfo P:nth-child(3) {
+              position: absolute;
+              left: 0.1;
+              bottom: 0.02rem;
+              margin-bottom: 0.12rem;
+              height: 0.34rem;
+              font-size: 0.28rem;
+              line-height: 0.34rem; }
+              section #ThemeListContent > #prolist li .proinfo P:nth-child(3) del {
+                color: #999;
+                margin-left: 0.1rem; }
+              section #ThemeListContent > #prolist li .proinfo P:nth-child(3) span {
+                width: 0.9rem;
+                height: 100%;
+                border-radius: 0.01rem;
+                background: #ff5d74;
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+                text-align: center;
+                font-size: 0.28rem;
+                line-height: 0.34rem;
+                color: white; }
+  section #kindContent .kindList {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap; }
+    section #kindContent .kindList .list1 {
+      border-radius: 0.05rem;
+      margin-left: 1%;
+      margin-top: 0.1rem;
+      max-width: 46%;
+      height: 4rem;
+      border: 1px solid #eee;
+      padding: 1%; }
+      section #kindContent .kindList .list1 .proImg {
+        width: 100%;
+        height: 65%;
+        overflow: hidden; }
+        section #kindContent .kindList .list1 .proImg img {
+          width: 100%; }
+      section #kindContent .kindList .list1 .proInfo {
+        line-height: 0.4rem; }
+        section #kindContent .kindList .list1 .proInfo p:nth-child(1) {
+          display: flex; }
+          section #kindContent .kindList .list1 .proInfo p:nth-child(1) span:nth-child(1) {
+            flex: 1;
+            font-size: 0.32rem;
+            color: #ff5d74;
+            line-height: 0.6rem; }
+          section #kindContent .kindList .list1 .proInfo p:nth-child(1) span:nth-child(2) {
+            margin: 0.1rem;
+            width: 0.8rem;
+            height: 0.4rem;
+            background-color: #ff5d74;
+            color: #fff;
+            text-align: center;
+            line-height: 0.4rem;
+            font-size: 0.32rem;
+            border-radius: 0.05rem; }
+        section #kindContent .kindList .list1 .proInfo p:nth-child(2) {
+          text-decoration: line-through;
+          color: #999; }
+        section #kindContent .kindList .list1 .proInfo p:nth-child(3) {
+          font-size: 0.26rem;
+          color: #333;
+          display: -webkit-box;
+          overflow: hidden;
+          white-space: normal !important;
+          text-overflow: ellipsis;
+          word-wrap: break-word;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical; }
+    section #kindContent .kindList .list2 {
+      width: 100%;
+      height: 1.8rem;
+      display: flex;
+      position: relative; }
+      section #kindContent .kindList .list2 .proImg {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin: 0.1rem; }
+      section #kindContent .kindList .list2 .proInfo {
+        flex: 1;
+        margin-top: 0.14rem;
+        margin-right: 0.2rem;
+        position: relative; }
+        section #kindContent .kindList .list2 .proInfo p {
+          width: 100%;
+          font-size: 0.32rem;
+          line-height: 0.5rem; }
+          section #kindContent .kindList .list2 .proInfo p:nth-child(1) {
+            display: -webkit-box;
+            overflow: hidden;
+            white-space: normal !important;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical; }
+          section #kindContent .kindList .list2 .proInfo p:nth-child(2) {
+            margin-top: 0.1rem; }
+            section #kindContent .kindList .list2 .proInfo p:nth-child(2) span {
+              font-size: 0.28rem;
+              color: #ff5d74; }
+              section #kindContent .kindList .list2 .proInfo p:nth-child(2) span b {
+                font-size: 0.32rem; }
+              section #kindContent .kindList .list2 .proInfo p:nth-child(2) span del {
+                margin-left: 0.3rem; }
+          section #kindContent .kindList .list2 .proInfo p:nth-child(3) {
+            margin: 0.1rem;
+            width: 0.8rem;
+            height: 0.4rem;
+            background-color: #ff5d74;
+            color: #fff;
+            text-align: center;
+            line-height: 0.4rem;
+            font-size: 0.32rem;
+            border-radius: 0.05rem; }
+      section #kindContent .kindList .list2:after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: #eee;
+        transform-origin: 0 0;
+        transform: scaleY(0.5); }
+  section #moreContent {
+    height: 100%;
+    width: 100%; }
+    section #moreContent .moreList1 {
+      margin: 3%;
+      height: 3rem;
+      width: 94%;
+      border: 1px solid gray;
+      border-radius: 5px; }
+      section #moreContent .moreList1 li {
+        height: 1rem;
+        line-height: 1rem;
+        padding: 0 2%;
+        position: relative; }
+        section #moreContent .moreList1 li:after {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: #999;
+          transform-origin: 0 0;
+          transform: scaleY(0.5); }
+        section #moreContent .moreList1 li span {
+          float: right; }
+    section #moreContent .moreList2 {
+      margin: 3%;
+      height: 2rem;
+      width: 94%;
+      border: 1px solid gray;
+      border-radius: 5px; }
+      section #moreContent .moreList2 li {
+        height: 1rem;
+        line-height: 1rem;
+        padding: 0 2%;
+        position: relative; }
+        section #moreContent .moreList2 li:after {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: #999;
+          transform-origin: 0 0;
+          transform: scaleY(0.5); }
+        section #moreContent .moreList2 li span {
+          float: right; }
+
+footer {
+  width: 100%;
+  height: 0.8rem;
+  background: #fff;
+  box-sizing: border-box;
+  border-top: 1px solid #eee; }
+  footer #bottom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: #999; }
+    footer #bottom li {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box; }
+      footer #bottom li i.iconfont {
+        font-size: 0.38rem; }
+      footer #bottom li.active {
+        color: #ff5d74; }
+  footer #detailFoot {
+    width: 100%;
+    height: 100%;
+    background: #fff; }
+    footer #detailFoot ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 94%;
+      height: 100%;
+      padding: 0 3%; }
+      footer #detailFoot ul li {
+        height: 80%;
+        box-sizing: border-box;
+        border: 1px solid #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        footer #detailFoot ul li:nth-child(1) {
+          width: 37%;
+          margin-right: 3%; }
+          footer #detailFoot ul li:nth-child(1) p {
+            font-size: 0.38rem;
+            color: #ff5d74; }
+        footer #detailFoot ul li:nth-child(2) {
+          width: 60%;
+          font-size: 0.42rem;
+          background-color: #ff5d74;
+          color: #fff; }
+
+/*# sourceMappingURL=main.css.map */
