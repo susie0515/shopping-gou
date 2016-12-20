@@ -28,8 +28,10 @@ module.exports = {
 				//alert("111");
 				if(localStorage.getItem("isLogin")=="OK!"){
 					var cart=require("./cart");
+					var foot=require("./foot");
 					cart.addCartHeader();
 					cart.addCartContent();
+					foot.addFoot("2");
 				}else{
 					var login=require("./login");
 					login.addLoginHeader("user");
