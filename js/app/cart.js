@@ -67,7 +67,7 @@ module.exports = {
 				
 			}else{
 				$(".emptyInfo").show();
-				$(".editBtn").parent().hide();
+				$(".editBtn").hide();
 				$(".countBtn").parent().hide();
 				$("#cartCount").hide();
 			}
